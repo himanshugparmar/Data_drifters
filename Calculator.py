@@ -14,6 +14,10 @@ def divide(a, b):
         return "Error: Division by zero"
     return a / b
 
+def divide_2(a, b):
+    if b == 0:
+        return "Error: Division by zero"
+    return (a / b) / 2
 
 if __name__ == "__main__":
     x = 10
