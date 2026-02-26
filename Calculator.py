@@ -26,7 +26,11 @@ def power(a, b):
     """Raise a to the power of b"""
     return a ** b
 
-
+def modulus(a, b):
+    """Return remainder of a divided by b"""
+    if b == 0:
+        return "Error: Modulus by zero"
+    return a % b
 
 # ========================
 # MAIN TEST BLOCK
@@ -41,4 +45,5 @@ if __name__ == "__main__":
     print("Multiply:", multiply(x, y))
     print("Divide:", divide(x, y))
     print("Power:", power(x, y))
+    print("Modulus:", modulus(x, y))
     print("Webhook test")
