@@ -1,0 +1,1 @@
+Since the "Current Content" section is provided as a placeholder without actual content, I'll need specific details or the actual content that needs updating to proceed effectively. Please provide the text or the specific sections that require modifications, and I will be happy to help update the documentation accordingly.
