@@ -14,10 +14,10 @@ def divide(a, b):
         return "Error: Division by zero"
     return a / b
 
-def divide_10(a, b):
+def divide_5(a, b):
     if b == 0:
         return "Error: Division by zero"
-    return (a / b) / 10
+    return (a / b) / 5
 
 if __name__ == "__main__":
     x = 10
