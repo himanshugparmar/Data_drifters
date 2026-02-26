@@ -17,7 +17,7 @@ Welcome to our API documentation. Here you will find comprehensive information a
 - `multiply(a, b)` - Multiplies two numbers.
 - `divide(a, b)` - Divides the first number by the second.
 - `modulus(a, b)` - Returns the remainder of division of the first number by the second.
-- **`floor_divide(a, b)` - Divides the first number by the second and rounds down to the nearest whole number.**
+- `floor_divide(a, b)` - Divides the first number by the second and rounds down to the nearest whole number.
 
 ---
 
@@ -63,7 +63,7 @@ Returns the remainder of division of the first number by the second.
 - **Returns:**
   - `int`: The remainder when `a` is divided by `b`.
 
-### **`floor_divide(a, b)`**
+### `floor_divide(a, b)`
 Divides the first number by the second and rounds down to the nearest whole number.
 - **Parameters:**
   - `a` (int): The first number.
@@ -105,7 +105,7 @@ result = modulus(5, 3)
 print(result)  # Output: 2
 ```
 
-### **`floor_divide(a, b)`**
+### `floor_divide(a, b)`
 ```python
 result = floor_divide(5, 3)
 print(result)  # Output: 1
