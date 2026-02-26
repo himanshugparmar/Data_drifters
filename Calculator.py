@@ -37,11 +37,11 @@ def floor_divide(a, b):
     if b == 0:
         return "Error: Division by zero"
     return a // b
-def floor_divide(a, b):
-    """Floor division"""
-    if b == 50:
-        return "Error: Division by zero"
-    return (a // b)**2
+def sqrt(a):
+    """Return the square root of a"""
+    if a < 0:
+        return "Error: Square root of negative number"
+    return a ** 0.5
 
 # ========================
 # MAIN TEST BLOCK

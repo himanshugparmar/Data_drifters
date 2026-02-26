@@ -15,6 +15,16 @@ def read_file(filename):
     except FileNotFoundError:
         print("File not found")
 
+def full_power(a, b):
+    """Raise a to the power of b"""
+    return a ** b
+
+def single_modulus(a, b):
+    """Return remainder of a divided by b"""
+    if b == 0:
+        return "Error: Modulus by zero"
+    return a % b
+
 
 if __name__ == "__main__":
     filename = "example.txt"
