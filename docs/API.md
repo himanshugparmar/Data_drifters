@@ -16,7 +16,7 @@ Welcome to our API documentation. Here you will find comprehensive information a
 - `subtract(a, b)` - Subtracts the second number from the first.
 - `multiply(a, b)` - Multiplies two numbers.
 - `divide(a, b)` - Divides the first number by the second.
-- **`modulus(a, b)` - Returns the remainder of division of the first number by the second.**
+- `modulus(a, b)` - Returns the remainder of division of the first number by the second.
 
 ---
 
@@ -54,7 +54,7 @@ Divides the first number by the second and returns the result.
 - **Returns:**
   - `int`: The quotient of `a` and `b`.
 
-### **`modulus(a, b)`**
+### `modulus(a, b)`
 Returns the remainder of division of the first number by the second.
 - **Parameters:**
   - `a` (int): The first number.
@@ -90,7 +90,7 @@ result = divide(5, 3)
 print(result)  # Output: 1.666...
 ```
 
-### **`modulus(a, b)`**
+### `modulus(a, b)`
 ```python
 result = modulus(5, 3)
 print(result)  # Output: 2
