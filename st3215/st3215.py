@@ -27,7 +27,7 @@ class ST3215(protocol_packet_handler):
         self.lock = threading.Lock()
 
 
-    def LinkServo(self, sts_id):
+    def PingServo(self, sts_id):
         """
         Check the presence of a servo.
 
