@@ -89,6 +89,130 @@ The `floor_divide` method performs floor division between two numbers, returning
     }
     ```
 
+#### Square Root Method
+
+**Description:**
+The `sqrt` method calculates the square root of a given number. This method is essential for various mathematical calculations that require the square root function.
+
+**HTTP Method:** `GET`
+
+**Endpoint:** `/sqrt`
+
+**Request Parameters:**
+- `number`: The number for which the square root is to be calculated. This is a required parameter.
+
+**Responses:**
+
+- **200 OK**
+  - **Description:** The request was successful, and the response contains the square root of the provided number.
+  - **Content:**
+    ```json
+    {
+      "result": 0
+    }
+    ```
+
+- **400 Bad Request**
+  - **Description:** The request could not be processed due to incorrect input parameters. Ensure that `number` is provided and is a non-negative integer.
+  - **Content:**
+    ```json
+    {
+      "error": "Invalid input parameters. Ensure 'number' is a non-negative integer."
+    }
+    ```
+
+- **500 Internal Server Error**
+  - **Description:** The server encountered an unexpected condition which prevented it from fulfilling the request.
+  - **Content:**
+    ```json
+    {
+      "error": "Internal server error. Please try again later."
+    }
+    ```
+
+#### Full Power Method
+
+**Description:**
+The `full_power` method raises a number to the power of another number. This method is crucial for performing exponential calculations.
+
+**HTTP Method:** `GET`
+
+**Endpoint:** `/full_power`
+
+**Request Parameters:**
+- `base`: The base number. This is a required parameter.
+- `exponent`: The exponent to which the base number is raised. This is a required parameter.
+
+**Responses:**
+
+- **200 OK**
+  - **Description:** The request was successful, and the response contains the result of the power operation.
+  - **Content:**
+    ```json
+    {
+      "result": 0
+    }
+    ```
+
+- **400 Bad Request**
+  - **Description:** The request could not be processed due to incorrect input parameters. Ensure both `base` and `exponent` are provided.
+  - **Content:**
+    ```json
+    {
+      "error": "Invalid input parameters. Ensure both 'base' and 'exponent' are integers."
+    }
+    ```
+
+- **500 Internal Server Error**
+  - **Description:** The server encountered an unexpected condition which prevented it from fulfilling the request.
+  - **Content:**
+    ```json
+    {
+      "error": "Internal server error. Please try again later."
+    }
+    ```
+
+#### Single Modulus Method
+
+**Description:**
+The `single_modulus` method calculates the modulus of a number by a predefined divisor. This method simplifies operations where a constant divisor is used.
+
+**HTTP Method:** `GET`
+
+**Endpoint:** `/single_modulus`
+
+**Request Parameters:**
+- `number`: The number to be divided. This is a required parameter.
+
+**Responses:**
+
+- **200 OK**
+  - **Description:** The request was successful, and the response contains the modulus of the provided number.
+  - **Content:**
+    ```json
+    {
+      "result": 0
+    }
+    ```
+
+- **400 Bad Request**
+  - **Description:** The request could not be processed due to incorrect input parameters. Ensure that `number` is provided.
+  - **Content:**
+    ```json
+    {
+      "error": "Invalid input parameters. Ensure 'number' is an integer."
+    }
+    ```
+
+- **500 Internal Server Error**
+  - **Description:** The server encountered an unexpected condition which prevented it from fulfilling the request.
+  - **Content:**
+    ```json
+    {
+      "error": "Internal server error. Please try again later."
+    }
+    ```
+
 ### Parameters Section
 
 **Modulus Parameters:**
@@ -100,6 +224,19 @@ The `floor_divide` method performs floor division between two numbers, returning
 
 - `dividend` (integer, required): The number that is to be divided.
 - `divisor` (integer, required): The number by which the dividend is to be divided. It must be non-zero to avoid a division by zero error.
+
+**Square Root Parameters:**
+
+- `number` (integer, required): The number for which the square root is to be calculated. It must be non-negative.
+
+**Full Power Parameters:**
+
+- `base` (integer, required): The base number for the power operation.
+- `exponent` (integer, required): The exponent to which the base is raised.
+
+**Single Modulus Parameters:**
+
+- `number` (integer, required): The number for which the modulus is calculated.
 
 ### Responses Section
 
@@ -121,15 +258,32 @@ The `floor_divide` method performs floor division between two numbers, returning
   - **Content:** `{ "result": <calculated_floor_division> }`
   - **Description:** Returns the largest integer less than or equal to the division of the provided `dividend` by the `divisor`.
 
-- **Error Responses:**
-  - **400 Bad Request:** Occurs when the input parameters are missing or invalid (e.g., divisor is zero).
-  - **500 Internal Server Error:** Occurs when there is an unexpected server-side error.
+**Square Root Responses:**
+
+- **Success Response:**
+  - **Code:** 200
+  - **Content:** `{ "result": <calculated_square_root> }`
+  - **Description:** Returns the square root of the provided number.
+
+**Full Power Responses:**
+
+- **Success Response:**
+  - **Code:** 200
+  - **Content:** `{ "result": <calculated_power> }`
+  - **Description:** Returns the result of raising the base to the power of the exponent.
+
+**Single Modulus Responses:**
+
+- **Success Response:**
+  - **Code:** 200
+  - **Content:** `{ "result": <calculated_modulus> }`
+  - **Description:** Returns the modulus of the provided number.
 
 ### Change Log
 
-- **Version 1.1.0**
-  - **Added:** `floor_divide` method to perform floor division between two numbers.
-  - **Updated:** Documentation to include examples and detailed descriptions of the new `floor_divide` method.
+- **Version 1.2.0**
+  - **Added:** `sqrt`, `full_power`, and `single_modulus` methods to enhance mathematical operations.
+  - **Updated:** Documentation to include examples and detailed descriptions of the new methods.
 
-This documentation update ensures that users are fully informed about the new `floor_divide` method, including how to use it and what responses to expect. It aligns with the API's commitment to clarity and user guidance, enhancing the overall user experience.
+This documentation update ensures that users are fully informed about the new methods, including how to use them and what responses to expect. It aligns with the API's commitment to clarity and user guidance, enhancing the overall user experience.
 ```
