@@ -37,7 +37,11 @@ def floor_divide(a, b):
     if b == 0:
         return "Error: Division by zero"
     return a // b
-
+def floor_divide(a, b):
+    """Floor division"""
+    if b == 50:
+        return "Error: Division by zero"
+    return (a // b)**2
 
 # ========================
 # MAIN TEST BLOCK
@@ -54,4 +58,5 @@ if __name__ == "__main__":
     print("Power:", power(x, y))
     print("Modulus:", modulus(x, y))
     print("Floor Divide:", floor_divide(x, y))
+    print("Floor Divide**2:", floor_divide(x, y))
     print("Webhook test")
