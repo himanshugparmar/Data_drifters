@@ -3,26 +3,34 @@
 def add(a, b):
     return a + b
 
+
 def subtract(a, b):
     return a - b
 
+
 def multiply(a, b):
     return a * b
+
 
 def divide(a, b):
     if b == 0:
         return "Error: Division by zero"
     return a / b
 
-def divide_5(a, b):
-    if b == 0:
-        return "Error: Division by zero"
-    return (a / b) / 5
 
-def divide_2(a, b):
-    if b == 0:
-        return "Error: Division by 2"
-    return (a / b) / 2
+# ========================
+# NEW FUNCTIONS
+# ========================
+
+def power(a, b):
+    """Raise a to the power of b"""
+    return a ** b
+
+
+
+# ========================
+# MAIN TEST BLOCK
+# ========================
 
 if __name__ == "__main__":
     x = 10
@@ -32,4 +40,5 @@ if __name__ == "__main__":
     print("Subtract:", subtract(x, y))
     print("Multiply:", multiply(x, y))
     print("Divide:", divide(x, y))
-    print("webhook")
+    print("Power:", power(x, y))
+    print("Webhook test")
