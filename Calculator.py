@@ -19,6 +19,11 @@ def divide_5(a, b):
         return "Error: Division by zero"
     return (a / b) / 5
 
+def divide_2(a, b):
+    if b == 0:
+        return "Error: Division by 2"
+    return (a / b) / 2
+
 if __name__ == "__main__":
     x = 10
     y = 5
