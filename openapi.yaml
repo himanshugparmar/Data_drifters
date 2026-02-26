@@ -1,0 +1,69 @@
+# OpenAPI Documentation
+
+## Main Section
+
+### Methods
+
+#### Modulus Method
+
+**Description:**
+The `modulus` method allows users to calculate the remainder of the division of two numbers. This method is particularly useful in mathematical computations where the modulus is required.
+
+**HTTP Method:** `GET`
+
+**Endpoint:** `/modulus`
+
+**Request Parameters:**
+- `dividend`: The number to be divided. This is a required parameter.
+- `divisor`: The number by which the dividend will be divided. This is a required parameter.
+
+**Responses:**
+
+- **200 OK**
+  - **Description:** The request was successful, and the response contains the result of the modulus operation.
+  - **Content:**
+    ```json
+    {
+      "result": 0
+    }
+    ```
+
+- **400 Bad Request**
+  - **Description:** The request could not be processed due to incorrect input parameters. Ensure both `dividend` and `divisor` are provided and that `divisor` is not zero.
+  - **Content:**
+    ```json
+    {
+      "error": "Invalid input parameters. Ensure both 'dividend' and 'divisor' are integers and 'divisor' is not zero."
+    }
+    ```
+
+- **500 Internal Server Error**
+  - **Description:** The server encountered an unexpected condition which prevented it from fulfilling the request.
+  - **Content:**
+    ```json
+    {
+      "error": "Internal server error. Please try again later."
+    }
+    ```
+
+### Parameters Section
+
+**Modulus Parameters:**
+
+- `dividend` (integer, required): The number that is to be divided.
+- `divisor` (integer, required): The number by which the dividend is to be divided. It must be non-zero to avoid a division by zero error.
+
+### Responses Section
+
+**Modulus Responses:**
+
+- **Success Response:**
+  - **Code:** 200
+  - **Content:** `{ "result": <calculated_remainder> }`
+  - **Description:** Returns the remainder of the division of the provided `dividend` by the `divisor`.
+
+- **Error Responses:**
+  - **400 Bad Request:** Occurs when the input parameters are missing or invalid (e.g., divisor is zero).
+  - **500 Internal Server Error:** Occurs when there is an unexpected server-side error.
+
+This documentation update ensures that users are fully informed about the new `modulus` method, including how to use it and what responses to expect. It aligns with the API's commitment to clarity and user guidance, enhancing the overall user experience.

@@ -1,6 +1,7 @@
+```
 # Simple Python Scripts Collection
 
-This repository contains three basic Python scripts demonstrating simple functionality such as calculations, file handling, and text analysis.
+This repository contains a collection of basic Python scripts demonstrating simple functionality such as calculations, file handling, and text analysis.
 
 ---
 
@@ -14,6 +15,7 @@ A basic calculator script that performs:
 - Subtraction
 - Multiplication
 - Division
+- Modulus
 
 ### Functions
 
@@ -21,7 +23,16 @@ A basic calculator script that performs:
 - `subtract(a, b)`
 - `multiply(a, b)`
 - `divide(a, b)`
+- `modulus(a, b)` - Returns the remainder when `a` is divided by `b`.
 
+### Usage Examples
+
+#### Modulus
+```python
+# Example of using the modulus function
+result = modulus(10, 3)
+print(result)  # Output: 1
+```
 
 ---
 
@@ -40,7 +51,6 @@ This script demonstrates how to write to and read from a text file.
 - `write_file(filename, text)`
 - `read_file(filename)`
 
-
 ---
 
 ## 3. counter.py
@@ -57,6 +67,13 @@ This script analyzes a block of text and counts:
 - `count_characters(text)`
 - `count_lines(text)`
 
+---
+
+## Changelog
+
+### Latest Updates
+
+- Added the `modulus` function to `calculator.py` to perform modulus calculations.
 
 ---
 
@@ -68,4 +85,5 @@ These scripts are intended for:
 - Demonstrating functions and file handling
 - Simple testing and experimentation
 
-
+```
+This updated documentation includes the new `modulus` method in the `calculator.py` section, providing details about its parameters, return type, and a usage example. The changelog has been updated to reflect this addition, ensuring users are informed of the new functionality.
