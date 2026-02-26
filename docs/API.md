@@ -1,3 +1,4 @@
+```
 # API Documentation
 
 Welcome to our API documentation. Here you will find comprehensive information about how to integrate and use our API effectively. This document is structured to guide you through each available method, providing detailed descriptions, usage examples, and update logs.
@@ -17,7 +18,10 @@ Welcome to our API documentation. Here you will find comprehensive information a
 - `multiply(a, b)` - Multiplies two numbers.
 - `divide(a, b)` - Divides the first number by the second.
 - `modulus(a, b)` - Returns the remainder of division of the first number by the second.
-- **`floor_divide(a, b)` - Divides the first number by the second and rounds down to the nearest whole number.**
+- `floor_divide(a, b)` - Divides the first number by the second and rounds down to the nearest whole number.
+- **`sqrt(x)`** - Returns the square root of a number.
+- **`full_power(a, b)`** - Raises the first number to the power of the second number.
+- **`single_modulus(a)`** - Returns the modulus of a single number with a predefined constant.
 
 ---
 
@@ -63,13 +67,35 @@ Returns the remainder of division of the first number by the second.
 - **Returns:**
   - `int`: The remainder when `a` is divided by `b`.
 
-### **`floor_divide(a, b)`**
+### `floor_divide(a, b)`
 Divides the first number by the second and rounds down to the nearest whole number.
 - **Parameters:**
   - `a` (int): The first number.
   - `b` (int): The second number.
 - **Returns:**
   - `int`: The largest integer less than or equal to the division of `a` by `b`.
+
+### **`sqrt(x)`**
+Returns the square root of a number.
+- **Parameters:**
+  - `x` (int): The number to find the square root of.
+- **Returns:**
+  - `float`: The square root of `x`.
+
+### **`full_power(a, b)`**
+Raises the first number to the power of the second number.
+- **Parameters:**
+  - `a` (int): The base number.
+  - `b` (int): The exponent.
+- **Returns:**
+  - `int`: The result of `a` raised to the power of `b`.
+
+### **`single_modulus(a)`**
+Returns the modulus of a single number with a predefined constant.
+- **Parameters:**
+  - `a` (int): The number to find the modulus of.
+- **Returns:**
+  - `int`: The modulus of `a`.
 
 ---
 
@@ -105,10 +131,28 @@ result = modulus(5, 3)
 print(result)  # Output: 2
 ```
 
-### **`floor_divide(a, b)`**
+### `floor_divide(a, b)`
 ```python
 result = floor_divide(5, 3)
 print(result)  # Output: 1
+```
+
+### **`sqrt(x)`**
+```python
+result = sqrt(16)
+print(result)  # Output: 4.0
+```
+
+### **`full_power(a, b)`**
+```python
+result = full_power(2, 3)
+print(result)  # Output: 8
+```
+
+### **`single_modulus(a)`**
+```python
+result = single_modulus(10)
+print(result)  # Output: 2 (assuming the predefined constant is 8)
 ```
 
 ---
@@ -116,9 +160,11 @@ print(result)  # Output: 1
 ## Change Log
 
 ### Latest Updates
+- **2023-XX-XX**: Introduced new methods `sqrt(x)`, `full_power(a, b)`, and `single_modulus(a)` to enhance mathematical operations.
 - **2023-XX-XX**: Introduced a new method `modulus(a, b)` for calculating the remainder of division.
 - **2023-XX-XX**: Added the `floor_divide(a, b)` method for performing division that rounds down to the nearest whole number.
 
 ---
 
 This documentation is intended to provide all necessary details to utilize our API effectively. For any further assistance, please contact our support team.
+```
