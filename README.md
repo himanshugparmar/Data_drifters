@@ -1,4 +1,3 @@
-```
 # Simple Python Scripts Collection
 
 This repository contains a collection of basic Python scripts demonstrating simple functionality such as calculations, file handling, and text analysis.
@@ -16,6 +15,7 @@ A basic calculator script that performs:
 - Multiplication
 - Division
 - Modulus
+- **Floor Division**
 
 ### Functions
 
@@ -24,6 +24,7 @@ A basic calculator script that performs:
 - `multiply(a, b)`
 - `divide(a, b)`
 - `modulus(a, b)` - Returns the remainder when `a` is divided by `b`.
+- **`floor_divide(a, b)`** - Performs floor division on `a` by `b`, returning the largest integer less than or equal to the division result.
 
 ### Usage Examples
 
@@ -32,6 +33,13 @@ A basic calculator script that performs:
 # Example of using the modulus function
 result = modulus(10, 3)
 print(result)  # Output: 1
+```
+
+#### Floor Division
+```python
+# Example of using the floor_divide function
+result = floor_divide(10, 3)
+print(result)  # Output: 3
 ```
 
 ---
@@ -74,6 +82,7 @@ This script analyzes a block of text and counts:
 ### Latest Updates
 
 - Added the `modulus` function to `calculator.py` to perform modulus calculations.
+- **Added the `floor_divide` function to `calculator.py` to perform floor division calculations.**
 
 ---
 
@@ -85,5 +94,4 @@ These scripts are intended for:
 - Demonstrating functions and file handling
 - Simple testing and experimentation
 
-```
-This updated documentation includes the new `modulus` method in the `calculator.py` section, providing details about its parameters, return type, and a usage example. The changelog has been updated to reflect this addition, ensuring users are informed of the new functionality.
+This updated documentation includes the new `floor_divide` method in the `calculator.py` section, providing details about its parameters, return type, and a usage example. The changelog has been updated to reflect this addition, ensuring users are informed of the new functionality.
