@@ -1,4 +1,3 @@
-```
 # Simple Python Scripts Collection
 
 This repository contains a collection of basic Python scripts demonstrating simple functionality such as calculations, file handling, and text analysis.
@@ -85,5 +84,4 @@ These scripts are intended for:
 - Demonstrating functions and file handling
 - Simple testing and experimentation
 
-```
 This updated documentation includes the new `modulus` method in the `calculator.py` section, providing details about its parameters, return type, and a usage example. The changelog has been updated to reflect this addition, ensuring users are informed of the new functionality.
