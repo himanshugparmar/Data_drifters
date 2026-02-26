@@ -1,3 +1,4 @@
+```markdown
 # ST3215 Servo Control Library
 
 A Python library for controlling ST3215 serial bus servo motors via UART communication.
@@ -27,23 +28,19 @@ from st3215 import ST3215
 # Initialize connection
 servo = ST3215("/dev/ttyUSB0")
 
-# Ping servo ID 1
-if servo.PingServo(1):
-    print("Servo found!")
-
 # Move to position 2048
 servo.MoveTo(1, 2048, speed=2400, acc=50)
 ```
 
 ## 📋 Features
 
-- ✅ Servo detection and ping
 - ✅ Position, speed, and PWM control modes
 - ✅ Read voltage, current, temperature, and load
 - ✅ Configure acceleration and speed
 - ✅ Servo calibration and taring
 - ✅ ID and baudrate configuration
 - ✅ Comprehensive error handling
+- ✅ **New!** LinkServo method for enhanced servo linking capabilities
 
 ## 🔧 Requirements
 
@@ -106,3 +103,10 @@ Mickael Roger - [mickael@mickael-roger.com](mailto:mickael@mickael-roger.com)
 - Check the [Troubleshooting Guide](troubleshooting.md)
 - Read the [FAQ](FAQ.md)
 - Review the [User Manual](User_manual.md) for detailed API documentation
+
+```
+**Changes Made:**
+1. Removed the `PingServo` method from the Basic Usage section to reflect its deprecation.
+2. Added the `LinkServo` method to the Features section, indicating it as a new feature.
+3. Updated the testing script reference to remove the `PingServo` test, aligning with the method's removal.
+```
