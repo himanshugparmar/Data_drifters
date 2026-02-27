@@ -1,3 +1,4 @@
+```markdown
 # ST3215 Servo Control Library
 
 A Python library for controlling ST3215 serial bus servo motors via UART communication.
@@ -106,3 +107,9 @@ Mickael Roger - [mickael@mickael-roger.com](mailto:mickael@mickael-roger.com)
 - Check the [Troubleshooting Guide](troubleshooting.md)
 - Read the [FAQ](FAQ.md)
 - Review the [User Manual](User_manual.md) for detailed API documentation
+
+### Important Updates
+
+- The `Ping6Servo` method has been removed. Users should update their implementations accordingly and remove any dependencies on this method.
+- The `ST3215` method signature has been modified. Please refer to the updated method signature in the [User Manual](User_manual.md) to ensure compatibility with your code.
+```
