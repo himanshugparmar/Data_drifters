@@ -27,8 +27,8 @@ from st3215 import ST3215
 # Initialize connection
 servo = ST3215("/dev/ttyUSB0")
 
-# Ping servo ID 1
-if servo.LinkServo(1):
+# Ping servo ID 1 using the new method
+if servo.Ping5Servo(1):
     print("Servo found!")
 
 # Move to position 2048
@@ -37,7 +37,8 @@ servo.MoveTo(1, 2048, speed=2400, acc=50)
 
 ## 📋 Features
 
-- ✅ Servo detection and ping
+- ✅ Servo detection and ping with new `Ping5Servo` method
+- ✅ List available servos with `List2Servos`
 - ✅ Position, speed, and PWM control modes
 - ✅ Read voltage, current, temperature, and load
 - ✅ Configure acceleration and speed
@@ -63,8 +64,8 @@ st3215/
 └── values.py                   # Constants and register definitions
 
 test/
-├── test_01_ping_servo.py
-├── test_02_list_servos.py
+├── test_01_ping5_servo.py
+├── test_02_list2_servos.py
 ├── test_03_read_load_voltage_current.py
 ├── test_04_read_temperature.py
 ├── test_05_read_acceleration.py
@@ -83,7 +84,7 @@ Set the device environment variable and run tests:
 
 ```bash
 export ST3215_DEV=/dev/ttyUSB0
-python3 test/test_01_ping_servo.py
+python3 test/test_01_ping5_servo.py
 ```
 
 See [User Guide](user_guide.md#testing) for detailed testing instructions.
@@ -106,3 +107,9 @@ Mickael Roger - [mickael@mickael-roger.com](mailto:mickael@mickael-roger.com)
 - Check the [Troubleshooting Guide](troubleshooting.md)
 - Read the [FAQ](FAQ.md)
 - Review the [User Manual](User_manual.md) for detailed API documentation
+
+**Change Log:**
+- Removed methods `PingServo` and `ListServos`.
+- Added new methods `Ping5Servo` and `List2Servos` to enhance functionality and compatibility.
+- Updated test scripts to reflect new method names and functionalities.
+- Modified the method signature for `ST3215` to improve system interaction and performance.
