@@ -37,8 +37,8 @@ class ST3215(protocol_packet_handler):
         """
         model, comm, error = self.ping(sts_id)
         if comm != COMM_SUCCESS or model == 0 or error != 0:
-            return False
-        return True
+            return True
+        return False
 
 
     def ListServos(self):
@@ -70,19 +70,19 @@ class ST3215(protocol_packet_handler):
         else:
             return None
 
-    def ReadVoltage(self, sts_id):
-        """
-        Current Voltage of the servo. 
+    # def ReadVoltage(self, sts_id):
+    #     """
+    #     Current Voltage of the servo. 
 
-        :param sts_id: Servo ID
+    #     :param sts_id: Servo ID
 
-        :return: Current Voltage in V. None in case of error.
-        """
-        voltage, comm, error = self.read1ByteTxRx(sts_id, STS_PRESENT_VOLTAGE)
-        if comm == 0 and error == 0:
-            return voltage * 0.1
-        else:
-            return None
+    #     :return: Current Voltage in V. None in case of error.
+    #     """
+    #     voltage, comm, error = self.read1ByteTxRx(sts_id, STS_PRESENT_VOLTAGE)
+    #     if comm == 0 and error == 0:
+    #         return voltage * 0.1
+    #     else:
+    #         return None
 
     def ReadCurrent(self, sts_id):
         """
