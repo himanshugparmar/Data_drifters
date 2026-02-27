@@ -1,3 +1,4 @@
+```markdown
 # ST3215 Servo Control Library
 
 A Python library for controlling ST3215 serial bus servo motors via UART communication.
@@ -39,7 +40,8 @@ servo.MoveTo(1, 2048, speed=2400, acc=50)
 
 - ✅ Servo detection and ping
 - ✅ Position, speed, and PWM control modes
-- ✅ Read voltage, current, temperature, and load
+- ❌ Read voltage (method removed)
+- ✅ Read current, temperature, and load
 - ✅ Configure acceleration and speed
 - ✅ Servo calibration and taring
 - ✅ ID and baudrate configuration
@@ -106,3 +108,8 @@ Mickael Roger - [mickael@mickael-roger.com](mailto:mickael@mickael-roger.com)
 - Check the [Troubleshooting Guide](troubleshooting.md)
 - Read the [FAQ](FAQ.md)
 - Review the [User Manual](User_manual.md) for detailed API documentation
+```
+
+### Notes:
+- The `ReadVoltage` method has been removed, so references to reading voltage have been updated accordingly.
+- The `ST3215` method's signature has been modified, but specific changes to its parameters or return values are not detailed here. Users should refer to the updated API documentation for precise usage instructions.
