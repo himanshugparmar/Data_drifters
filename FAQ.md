@@ -76,7 +76,7 @@ ST3215 is a serial bus servo motor with built-in controller. It communicates via
 ```python
 # Try basic ping
 servo = ST3215("/dev/ttyUSB0")
-if servo.PingServo(1):
+if servo.LinkServo(1):
     print("Compatible servo detected!")
 else:
     print("Servo not responding - might be different protocol")
@@ -745,7 +745,7 @@ if mode == 0:
 def scan_range(servo, start, end):
     found = []
     for sid in range(start, end + 1):
-        if servo.PingServo(sid):
+        if servo.LinkServo(sid):
             found.append(sid)
     return found
 
@@ -760,7 +760,7 @@ KNOWN_SERVOS = [1, 2, 3, 4]
 
 # Verify they're present
 for sid in KNOWN_SERVOS:
-    if not servo.PingServo(sid):
+    if not servo.LinkServo(sid):
         print(f"Warning: Servo {sid} not responding")
 ```
 
@@ -783,7 +783,7 @@ for sid in KNOWN_SERVOS:
 2. **Wrong servo ID**
 ```python
 # Verify servo ID
-if servo.PingServo(1):
+if servo.LinkServo(1):
     print("Servo 1 present")
 else:
     print("Check servo ID")
@@ -808,7 +808,7 @@ else:
 result = servo.ReadVoltage(1)
 if result is None:
     # Step 1: Can we ping?
-    if servo.PingServo(1):
+    if servo.LinkServo(1):
         print("Ping OK, but read failed")
         # Retry read
         time.sleep(0.1)

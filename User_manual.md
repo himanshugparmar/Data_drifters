@@ -115,7 +115,7 @@ servo = ST3215("/dev/ttyAMA0")
 
 ## Servo Discovery Methods
 
-### PingServo(sts_id)
+### LinkServo(sts_id)
 
 Check if a servo is present and responding on the bus.
 
@@ -128,7 +128,7 @@ Check if a servo is present and responding on the bus.
 **Example:**
 
 ```python
-if servo.PingServo(1):
+if servo.LinkServo(1):
     print("Servo ID 1 detected")
 else:
     print("No response from servo ID 1")
@@ -1145,7 +1145,7 @@ import time
 
 max_retries = 3
 for attempt in range(max_retries):
-    result = servo.PingServo(1)
+    result = servo.LinkServo(1)
     if result:
         break
     print(f"Retry {attempt + 1}/{max_retries}")

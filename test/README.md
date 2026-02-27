@@ -40,7 +40,7 @@ for test in test_*.py; do echo "Running $test"; python "$test"; echo; done
 
 ## Test Descriptions
 
-### Test 01: PingServo
+### Test 01: LinkServo
 Tests basic communication with servo ID 1.
 - **File**: `test_01_ping_servo.py`
 - **Purpose**: Verify servo is connected and responding

@@ -137,7 +137,7 @@ try:
     
     # Test servo communication
     print(f"\nTesting servo ID {SERVO_ID}...")
-    if servo.PingServo(SERVO_ID):
+    if servo.LinkServo(SERVO_ID):
         print(f"✓ Servo {SERVO_ID} responding!")
         
         # Read basic info
@@ -204,7 +204,7 @@ servo = ST3215("/dev/cu.usbserial-1420")
 
 ```python
 # Quick check for specific ID
-if servo.PingServo(1):
+if servo.LinkServo(1):
     print("Servo 1 found!")
 
 # Scan all IDs (takes 15-30 seconds)
@@ -918,14 +918,14 @@ new_id = 5
 print(f"Changing servo ID from {old_id} to {new_id}")
 
 # Verify old ID exists
-if not servo.PingServo(old_id):
+if not servo.LinkServo(old_id):
     print(f"✗ Servo {old_id} not found!")
     exit(1)
 
 print(f"✓ Servo {old_id} found")
 
 # Check new ID is not in use
-if servo.PingServo(new_id):
+if servo.LinkServo(new_id):
     print(f"⚠ Warning: Servo {new_id} already exists!")
     response = input("Continue anyway? (y/n): ")
     if response.lower() != 'y':
@@ -943,7 +943,7 @@ print("✓ ID changed successfully")
 
 # Verify new ID
 time.sleep(0.5)
-if servo.PingServo(new_id):
+if servo.LinkServo(new_id):
     print(f"✓ Servo {new_id} responding!")
 else:
     print(f"⚠ Cannot ping servo {new_id}")

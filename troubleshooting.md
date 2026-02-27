@@ -141,7 +141,7 @@ voltage = servo.ReadVoltage(1)  # Returns None
 
 ```python
 # Test ping
-result = servo.PingServo(1)
+result = servo.LinkServo(1)
 print(f"Ping result: {result}")
 
 if not result:
@@ -178,7 +178,7 @@ for baud in baudrates:
     try:
         servo = ST3215("/dev/ttyUSB0")
         servo.portHandler.setBaudRate(baud)
-        if servo.PingServo(1):
+        if servo.LinkServo(1):
             print(f"✓ Communication works at {baud}")
             break
     except:
@@ -191,7 +191,7 @@ for baud in baudrates:
 # Scan for any responding servo
 print("Scanning for servos...")
 for test_id in [1, 2, 3, 5, 10]:  # Common IDs
-    if servo.PingServo(test_id):
+    if servo.LinkServo(test_id):
         print(f"✓ Found servo at ID {test_id}")
 ```
 
@@ -264,7 +264,7 @@ print("-" * 20)
 
 found = []
 for test_id in range(254):
-    if servo.PingServo(test_id):
+    if servo.LinkServo(test_id):
         print(f"{test_id:3d}  ✓ FOUND")
         found.append(test_id)
     else:
@@ -306,7 +306,7 @@ for servo_id in range(1, 10):
 1. Disconnect servo power supply
 2. Wait 10 seconds
 3. Reconnect power
-4. Test: servo.PingServo(1)
+4. Test: servo.LinkServo(1)
 ```
 
 #### Factory Reset (if supported)
@@ -645,7 +645,7 @@ for pos in [1000, 2000, 3000, 2000]:
 ```python
 # Verify current ID
 old_id = 1
-if not servo.PingServo(old_id):
+if not servo.LinkServo(old_id):
     print("Cannot find servo at ID", old_id)
     
     # Try scanning
@@ -678,7 +678,7 @@ if error:
 
 # Wrong:
 servo.ChangeBaudrate(1, 4)  # Changed to 115200
-servo.PingServo(1)  # Still using 1M - Won't work!
+servo.LinkServo(1)  # Still using 1M - Won't work!
 
 # Correct:
 servo.ChangeBaudrate(1, 4)
@@ -703,7 +703,7 @@ def find_servo_baudrate(device, servo_id):
         try:
             servo = ST3215(device)
             servo.portHandler.setBaudRate(baud)
-            if servo.PingServo(servo_id):
+            if servo.LinkServo(servo_id):
                 print(f"✓ Found servo at {baud} baud")
                 return baud
         except:
@@ -958,7 +958,7 @@ def diagnose(device="/dev/ttyUSB0", servo_id=1):
     
     # Test 2: Ping
     print(f"\n[2/7] Pinging servo ID {servo_id}...")
-    if not servo.PingServo(servo_id):
+    if not servo.LinkServo(servo_id):
         print(f"✗ No response from servo {servo_id}")
         print("Scanning bus...")
         found = servo.ListServos()

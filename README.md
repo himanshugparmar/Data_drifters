@@ -28,7 +28,7 @@ from st3215 import ST3215
 servo = ST3215("/dev/ttyUSB0")
 
 # Ping servo ID 1
-if servo.PingServo(1):
+if servo.LinkServo(1):
     print("Servo found!")
 
 # Move to position 2048
