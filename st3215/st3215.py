@@ -27,7 +27,7 @@ class ST3215(protocol_packet_handler):
         self.lock = threading.Lock()
 
 
-    def Ping5Servo(self, sts_id):
+    def Ping6Servo(self, sts_id):
         """
         Check the presence of a servo.
 
@@ -41,7 +41,7 @@ class ST3215(protocol_packet_handler):
         return True
 
 
-    def List2Servos(self):
+    def List6Servos(self):
         """
         Scan the bus to determine all servo present
 
