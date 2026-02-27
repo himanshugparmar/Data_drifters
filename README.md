@@ -1,3 +1,4 @@
+```markdown
 # ST3215 Servo Control Library
 
 A Python library for controlling ST3215 serial bus servo motors via UART communication.
@@ -33,6 +34,11 @@ if servo.LinkServo(1):
 
 # Move to position 2048
 servo.MoveTo(1, 2048, speed=2400, acc=50)
+
+# New method usage example
+# Ping6Servo to check connectivity with IPv6 support
+if servo.Ping6Servo(1):
+    print("Servo found with IPv6!")
 ```
 
 ## 📋 Features
@@ -44,6 +50,7 @@ servo.MoveTo(1, 2048, speed=2400, acc=50)
 - ✅ Servo calibration and taring
 - ✅ ID and baudrate configuration
 - ✅ Comprehensive error handling
+- ✅ IPv6 support for servo pinging
 
 ## 🔧 Requirements
 
@@ -106,3 +113,9 @@ Mickael Roger - [mickael@mickael-roger.com](mailto:mickael@mickael-roger.com)
 - Check the [Troubleshooting Guide](troubleshooting.md)
 - Read the [FAQ](FAQ.md)
 - Review the [User Manual](User_manual.md) for detailed API documentation
+```
+
+### Notes:
+- Added a usage example for the new `Ping6Servo` method.
+- Updated the features list to include IPv6 support.
+- No changes were made to the `ST3215` method signature in the documentation as specific details were not provided. If there are changes to the parameters or behavior, those should be detailed in the relevant sections of the documentation.
