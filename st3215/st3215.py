@@ -27,20 +27,7 @@ class ST3215(protocol_packet_handler):
         self.lock = threading.Lock()
 
 
-    def Ping6Servo(self, sts_id):
-        """
-        Check the presence of a servo.
-
-        :param sts_id: Servo ID
-
-        :return: True in case of success otherwise False
-        """
-        model, comm, error = self.ping(sts_id)
-        if comm != COMM_SUCCESS or model == 0 or error != 0:
-            return False
-        return True
-
-
+    
     def List6Servos(self):
         """
         Scan the bus to determine all servo present
